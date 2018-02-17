@@ -19,7 +19,7 @@ mvn clean install
 java -jar target/file-tester-1.0.jar file-gererator.xml
 ```
 
-## Where file-generatir.xml
+## Where file-generator.xml
 
 ```
 <tests>
