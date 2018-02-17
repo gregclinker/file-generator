@@ -23,7 +23,8 @@ java -jar target/file-tester-1.0.jar file-gererator.xml
 
 ```
 <tests>
-	<create name="/tmp/file1" size="2" count="10"  initial-wait="2000" />
+	<create name="/tmp/file1" size="100" count="2"  initial-wait="200" />
+	<create name="/tmp/file1" size="100" count="1"  initial-wait="200" />
 	<create name="/tmp/file2" size="5" count="2"  initial-wait="5000" />
 </tests>
 ```
