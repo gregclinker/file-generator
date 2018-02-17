@@ -16,18 +16,17 @@ mvn clean install
 ## Running
 
 ```
-java -jar target/file-tester-0.1.0.jar
+java -jar target/file-tester-1.0.jar file-gererator.xml
 ```
 
-Go to a browser and look at [http://localhost:8080/](http://localhost:8080/) to test
-
-## Running in redirect mode
+## Where file-generatir.xml
 
 ```
-java -DREDIRECT_URL=http://localhost:8090/ -jar target/simple-proxy-0.1.0.jar
+<tests>
+	<create name="/tmp/file1" size="2" count="10"  initial-wait="2000" threads="15"/>
+	<create name="/tmp/file2" size="5" count="2"  initial-wait="5000" threads="5"/>
+</tests>
 ```
-
-Go to a browser and look at [http://localhost:8080/](http://localhost:8080/) to test
 
 ## Versioning
 
