@@ -1,4 +1,4 @@
-package com.santander.filetester;
+package com.santander.filegenerator;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.santander.filetester;
+package com.santander.filegenerator;
 
 import static org.junit.Assert.assertTrue;
 
@@ -12,9 +12,9 @@ public class RandomFileTest {
 	@Test
 	public void test1() throws IOException {
 		String fileName = "test1";
-		RandomFile randomFile = new RandomFile(fileName, 10);
+		RandomFile randomFile = new RandomFile(fileName, 1);
 		randomFile.generate();
-		
+
 		File file = new File(fileName);
 		assertTrue(file.exists());
 		assertTrue(file.delete());

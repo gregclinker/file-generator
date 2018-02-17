@@ -4,3 +4,4 @@
 .springBeans
 target
 dependency-reduced-pom.xml
+file-generator.log

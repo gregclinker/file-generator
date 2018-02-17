@@ -1,4 +1,4 @@
-package com.santander.filetester;
+package com.santander.filegenerator;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -10,21 +10,29 @@ import javax.xml.parsers.SAXParserFactory;
 import javax.xml.transform.stream.StreamSource;
 import javax.xml.validation.SchemaFactory;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.xml.sax.SAXException;
 
 public class Application {
 
-	public static void main(String[] args) throws Exception {
+	final static Logger LOGGER = LoggerFactory.getLogger(Application.class);
+
+	public static void main(String[] args) {
 		if (args.length != 1) {
 			System.out.println("");
 			System.out.println("Usage create <test.xml>");
 			System.out.println("");
 			System.exit(0);
 		}
-		Application application = new Application();
-		CreateSet createSet = application.parse(new FileInputStream(args[0]));
-		application.runCreate(createSet);
-		application.report(createSet);
+		try {
+			Application application = new Application();
+			CreateSet createSet = application.parse(new FileInputStream(args[0]));
+			application.runCreate(createSet);
+			application.report(createSet);
+		} catch (Exception e) {
+			LOGGER.error("something bad happened", e);
+		}
 	}
 
 	private void report(CreateSet createSet) {
@@ -49,16 +57,16 @@ public class Application {
 	public void runCreate(CreateSet createSet) throws InterruptedException {
 
 		for (Create create : createSet.getCreates()) {
-			System.out.println("started " + create);
+			LOGGER.debug("started " + create);
 			for (int i = 0; i < create.getCount(); i++) {
 				String fileName = create.getBaseName() + "_" + i;
 				if (create.getIntitalWait() > 0) {
-					System.out.println("waiting " + create.getIntitalWait() + " to create " + fileName);
+					LOGGER.debug("waiting " + create.getIntitalWait() + " to create " + fileName);
 					Thread.sleep(create.getIntitalWait());
 				}
 				new Thread(new RandomFile(fileName, create.getSize())).start();
 			}
-			System.out.println("finished starting threads");
+			LOGGER.debug("finished starting threads");
 		}
 	}
 }

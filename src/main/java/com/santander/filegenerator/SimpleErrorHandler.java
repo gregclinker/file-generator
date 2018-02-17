@@ -1,4 +1,4 @@
-package com.santander.filetester;
+package com.santander.filegenerator;
 
 import org.xml.sax.ErrorHandler;
 import org.xml.sax.SAXException;

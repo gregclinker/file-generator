@@ -1,4 +1,4 @@
-package com.santander.filetester;
+package com.santander.filegenerator;
 
 public class Create {
 

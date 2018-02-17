@@ -1,4 +1,4 @@
-package com.santander.filetester;
+package com.santander.filegenerator;
 
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
@@ -20,7 +20,7 @@ public class CreateHandler extends DefaultHandler {
 			create.setSize(Integer.parseInt(attributes.getValue("size")));
 			create.setCount(Integer.parseInt(attributes.getValue("count")));
 			create.setIntitalWait(Long.parseLong(attributes.getValue("initial-wait")));
-			create.setThreads(Integer.parseInt(attributes.getValue("threads")));
+			// create.setThreads(Integer.parseInt(attributes.getValue("threads")));
 			createSet.getCreates().add(create);
 		}
 	}
