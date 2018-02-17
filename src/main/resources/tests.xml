@@ -1,0 +1,4 @@
+<tests>
+	<create name="file1" size="2" count="10"  initial-wait="2000" threads="15"/>
+	<create name="file2" size="5" count="2"  initial-wait="5000" threads="5"/>
+</tests>
