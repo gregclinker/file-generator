@@ -1,4 +1,4 @@
-# simple-proxy
+# File Generator Tool
 
 File generator tool.
 
