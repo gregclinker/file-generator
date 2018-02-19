@@ -26,6 +26,7 @@ public class Application {
 			System.exit(0);
 		}
 		try {
+			new Thread(new KeepAlive()).start();
 			Application application = new Application();
 			CreateSet createSet = application.parse(new FileInputStream(args[0]));
 			application.runCreate(createSet);

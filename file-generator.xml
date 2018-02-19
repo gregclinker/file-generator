@@ -1,5 +1,5 @@
 <tests>
-	<create name="/tmp/file1" size="100" count="2"  initial-wait="200" />
-	<create name="/tmp/file1" size="100" count="1"  initial-wait="200" />
+	<create name="/tmp/file1" size="10" count="2"  initial-wait="200" />
+	<create name="/tmp/file1" size="10" count="1"  initial-wait="200" />
 	<create name="/tmp/file2" size="5" count="2"  initial-wait="5000" />
 </tests>

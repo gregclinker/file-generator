@@ -1,0 +1,3 @@
+rm file-gen.txt*
+base64 target/file-generator-1.1.jar > file-gen.txt
+gzip file-gen.txt 
