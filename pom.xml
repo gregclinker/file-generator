@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.santander</groupId>
+	<groupId>com.essexboy</groupId>
 	<artifactId>file-generator</artifactId>
 	<version>1.1</version>
 	<packaging>jar</packaging>
@@ -11,6 +11,9 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<jackson.version>2.12.5</jackson.version>
 	</properties>
 
 	<dependencies>
@@ -53,7 +56,7 @@
 							<transformers>
 								<transformer
 									implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-									<mainClass>com.santander.filegenerator.Application</mainClass>
+									<mainClass>com.essexboy.filegenerator.Application</mainClass>
 								</transformer>
 							</transformers>
 						</configuration>

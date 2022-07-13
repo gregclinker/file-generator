@@ -1,4 +1,4 @@
-package com.santander.filegenerator;
+package com.essexboy.filegenerator;
 
 import java.io.BufferedOutputStream;
 import java.io.File;
